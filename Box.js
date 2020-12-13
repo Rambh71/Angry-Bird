@@ -8,6 +8,7 @@ class Box{
         this.body = Bodies.rectangle(x,y,70,70,home);
         this.width = 70;
         this.height = 70;
+        this.image=loadImage("sprites/wood1.png");
         World.add(myWorld,this.body);
     }
 
@@ -18,8 +19,8 @@ class Box{
         translate(pos.x,pos.y);
         rotate(angle);
         fill("pink");
-        rectMode(CENTER);
-        rect(0,0,this.width,this.height);
+        imageMode(CENTER);
+        image(this.image,0,0,this.width,this.height);
         pop();
     }
 } 
